@@ -1,5 +1,5 @@
 Skákal pes,
-přes oves,¨
+přes oves,
 přes zelenou louku.
 Šel za ním myslivec,
 péro na klobouku.
