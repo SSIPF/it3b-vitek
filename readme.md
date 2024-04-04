@@ -2,6 +2,5 @@
 planetě. Je to napjatý okamžik. Novinky čips. Hadímu strážci září oči. Horův strážce 
 Horusova strážce se leskne zobák. Setešovu strážci z nosu... kape."
 
-![Uploading obrazek.png…]()
 
   
