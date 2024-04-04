@@ -1,11 +1,4 @@
-Skákal pes,
-přes oves,
-přes zelenou louku.
-Šel za ním myslivec,
-péro na klobouku.
-Pejsku náš,
-co děláš,
-žes tak vesel stále.
-Řek bych vám,
-nevím sám,
-hop a skákal dále.
+"Hadí strážce, Horova strážce a Seteshův strážce se setkávají na neutrální půdě. 
+planetě. Je to napjatý okamžik. Novinky čips. Hadímu strážci září oči. Horův strážce 
+Horusova strážce se leskne zobák. Setešovu strážci z nosu... kape."
+  
