@@ -1,1 +1,6 @@
 testuju
+
+
+git add "nazevsouboru"
+git commit -m "zprava"
+git push
