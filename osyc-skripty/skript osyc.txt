@@ -2,6 +2,7 @@
 
 ssh -i server_key.pub sysadmin@10.20.30.103
 sudo dnf install -y cockpit
+sudo dnf install -y git
 sudo systemctl enable --now cockpit.socket
 
 #Open the firewall if necessary:
