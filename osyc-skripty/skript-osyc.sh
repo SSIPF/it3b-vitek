@@ -1,3 +1,4 @@
+#cislo pracoviste CL1-02
 #vzdálená správa serveru
 
 ssh -i server_key.pub sysadmin@10.20.30.103
