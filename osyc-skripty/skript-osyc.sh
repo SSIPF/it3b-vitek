@@ -73,7 +73,7 @@ sudo firewall-cmd --reload
 
 sudo dnf install -y clamav clamav-update
 sudo systemctl enable --now clamd@scan
-sudo systemctl enable --now freshclam
+sudo systemctl enable --now clamav-freshclam
 sudo freshclam
 clamscan ~/.ssh/authorized_keys
 sudo systemctl enable --now fail2ban
