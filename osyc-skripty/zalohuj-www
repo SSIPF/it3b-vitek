@@ -1,0 +1,23 @@
+#!/bin/bash
+
+SOURCE_DIR="/var/www/html"
+BACKUP_DIR="/backupwww"
+BACKUP_FILE="$BACKUP_DIR/html_backup.tar.gz"
+
+# Create backup directory if it does not exist
+mkdir -p "$BACKUP_DIR"
+
+# Create a new backup
+tar -czf "$BACKUP_FILE" -C "$SOURCE_DIR" .
+
+echo "Backup of $SOURCE_DIR completed in $BACKUP_FILE."
+
+# Check for newer files and update backup if necessary
+NEWER_FILES=$(find "$SOURCE_DIR" -newer "$BACKUP_FILE")
+
+if [ -n "$NEWER_FILES" ]; then
+    tar -czf "$BACKUP_FILE" -C "$SOURCE_DIR" .
+    echo "Backup updated due to newer files."
+else
+    echo "No newer files found. Backup is up to date."
+fi
