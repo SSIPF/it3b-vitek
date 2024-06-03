@@ -1,0 +1,40 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 username"
+    exit 1
+fi
+
+USERNAME=$1
+WEB_DIR="/var/www/html"
+USER_DIR="/home/$USERNAME"
+WEB_USER_DIR="$WEB_DIR/$USERNAME"
+WEB_USER_WEB_DIR="$WEB_USER_DIR/web"
+
+# Check if the user exists
+if ! id "$USERNAME" &>/dev/null; then
+    echo "User $USERNAME does not exist."
+    exit 1
+fi
+
+# Create the web directory structure
+sudo mkdir -p "$WEB_USER_WEB_DIR"
+sudo chown -R "$USERNAME":"$USERNAME" "$WEB_USER_DIR"
+
+# Create index.html
+cat <<EOL | sudo tee "$WEB_USER_WEB_DIR/index.html"
+<!doctype html>
+<html>
+<head>
+    <title>$USERNAME's website</title>
+</head>
+<body>
+    <h1>$USERNAME's website</h1>
+    <p>This is an example web. User can now create custom web pages in ~/web/ directory.</p>
+</body>
+</html>
+EOL
+
+# Link the web directory to the user's home
+ln -s "$WEB_USER_WEB_DIR" "$USER_DIR/web"
+echo "Directory structure created and linked for user $USERNAME."
