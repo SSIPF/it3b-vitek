@@ -50,3 +50,18 @@ sudo usermod -a -G 4rocnik jkuliskova
 
 echo "Groups and users configured successfully."
 
+
+#!/bin/bash
+
+# Create main directory /www/
+sudo mkdir /www
+
+# Create subdirectories
+sudo mkdir /www/1rocnik
+sudo mkdir /www/2rocnik
+sudo mkdir /www/3rocnik
+sudo mkdir /www/4rocnik
+sudo mkdir /www/maturita
+
+echo "Directories created successfully."
+
