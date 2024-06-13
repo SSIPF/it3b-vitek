@@ -26,3 +26,27 @@ sudo useradd -c "Jitka Kuliskova" jkuliskova
 echo "jkuliskova:$default_password" | sudo chpasswd
 
 echo "Users created successfully with default password."
+
+#!/bin/bash
+
+# Create groups
+sudo groupadd vyucujici
+sudo groupadd zaci
+sudo groupadd 1rocnik
+sudo groupadd 2rocnik
+sudo groupadd 3rocnik
+sudo groupadd 4rocnik
+
+# Add users to groups
+sudo usermod -a -G vyucujici pdulezity
+sudo usermod -a -G zaci jhrabal
+sudo usermod -a -G zaci tsimakova
+sudo usermod -a -G zaci mmrazek
+sudo usermod -a -G zaci jkuliskova
+sudo usermod -a -G 1rocnik jhrabal
+sudo usermod -a -G 2rocnik tsimakova
+sudo usermod -a -G 3rocnik mmrazek
+sudo usermod -a -G 4rocnik jkuliskova
+
+echo "Groups and users configured successfully."
+
