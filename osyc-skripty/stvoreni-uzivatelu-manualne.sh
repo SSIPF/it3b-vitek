@@ -1,23 +1,28 @@
 #!/bin/bash
 
+# Remove carriage returns (if any)
 sed -i 's/\r$//' stvoreni-uzivatelu-manualne.sh
+
+# Make the script executable
 chmod +x stvoreni-uzivatelu-manualne.sh
 
+# Define the default password
+default_password="Uvodni-Heslo_1"
 
-# Create users with full names
+# Create users with full names and set default password
 sudo useradd -c "Pan Dulezity" pulezity
-sudo passwd Uvodni-Heslo_1
+echo "pulezity:$default_password" | sudo chpasswd
 
 sudo useradd -c "Jakub Hrabal" jhrabal
-sudo passwd Uvodni-Heslo_1
+echo "jhrabal:$default_password" | sudo chpasswd
 
 sudo useradd -c "Tereza Simakova" tsimakova
-sudo passwd Uvodni-Heslo_1
+echo "tsimakova:$default_password" | sudo chpasswd
 
 sudo useradd -c "Matin Mrazek" mmrazek
-sudo passwd Uvodni-Heslo_1
+echo "mmrazek:$default_password" | sudo chpasswd
 
 sudo useradd -c "Jitka Kuliskova" jkuliskova
-sudo passwd Uvodni-Heslo_1
+echo "jkuliskova:$default_password" | sudo chpasswd
 
-echo "Users created successfully."
+echo "Users created successfully with default password."
