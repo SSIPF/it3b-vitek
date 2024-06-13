@@ -38,7 +38,7 @@ sudo groupadd 3rocnik
 sudo groupadd 4rocnik
 
 # Add users to groups
-sudo usermod -a -G vyucujici pdulezity
+sudo usermod -a -G vyucujici pulezity
 sudo usermod -a -G zaci jhrabal
 sudo usermod -a -G zaci tsimakova
 sudo usermod -a -G zaci mmrazek
